@@ -19,13 +19,8 @@ export default {
         // },
         cors: true,
         method: 'get',
-        path: 'products/{id}',
+        path: 'cart',
         request: {
-          parameters: {
-            paths: {
-              id: true
-            }
-          }
         },
       },
     },

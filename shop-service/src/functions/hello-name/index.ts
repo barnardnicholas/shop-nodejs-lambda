@@ -6,6 +6,19 @@ export default {
   events: [
     {
       http: {
+        // cors: {
+        //   origin: '*',
+        //   headers: {
+        //     'Content-Type': true,
+        //     'X-Amz-Date': true,
+        //     'X-Api-Key': true,
+        //     'X-Amz-Security-Token': true,
+        //     'X-Amz-User-Agent': true,
+        //     'X-Amz-Trace-Id': true
+        //   },
+        //   allowCredentials: false,
+        // },
+        cors: true,
         method: 'post',
         path: 'hello-name',
         request: {

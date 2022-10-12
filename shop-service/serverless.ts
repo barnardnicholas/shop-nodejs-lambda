@@ -4,9 +4,10 @@ import hello from '@functions/hello';
 import helloName from '@functions/hello-name';
 import getAllProducts from '@functions/getAllProducts';
 import getProductByID from '@functions/getProductByID';
+import getCart from '@functions/getCart';
 
 const serverlessConfiguration: AWS = {
-  service: 'shop-service',
+  service: 'shop-service-nb',
   app: 'i-hate-serverless',
   org: 'nicholasbarnardepam',
   frameworkVersion: '3',
@@ -24,7 +25,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { hello, helloName, getAllProducts, getProductByID },
+  functions: { hello, helloName, getAllProducts, getProductByID, getCart },
   package: { individually: true },
   custom: {
     esbuild: {
