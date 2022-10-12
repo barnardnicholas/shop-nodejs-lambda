@@ -5,11 +5,11 @@ import { dummyCart } from '../../../dummyData';
 
 import schema from './schema';
 
-const hello: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
+const getCart: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
   return formatJSONResponse({
     dummyCart,
     event,
   });
 };
 
-export const main = middyfy(hello);
+export const main = middyfy(getCart);
