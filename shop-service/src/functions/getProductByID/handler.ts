@@ -5,7 +5,7 @@ import { availableProducts } from '../../../dummyData';
 
 import schema from './schema';
 
-const hello: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
+const getProductByID: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
   const {id} = event.pathParameters;
   const product = availableProducts.find((product) => product.id === id) || null;
   return formatJSONResponse({
@@ -14,4 +14,4 @@ const hello: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) =
   });
 };
 
-export const main = middyfy(hello);
+export const main = middyfy(getProductByID);
